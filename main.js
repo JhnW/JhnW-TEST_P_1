@@ -1,3 +1,3 @@
-const m = require("./s1/lib.js");
+const m = require("./TEST_H_1/lib.js");
 
 console.log("Test");
