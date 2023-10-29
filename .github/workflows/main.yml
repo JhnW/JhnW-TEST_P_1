@@ -1,0 +1,19 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os-environment: [ubuntu-20.04]
+    runs-on: ${{ matrix.os-environment }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v4.0.0
+      - name: run
+        run: node start
